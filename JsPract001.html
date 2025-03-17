@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript" type="text/javascript">
+
+        function Arith() {
+            var X = 5;
+            var y = 6;
+            x = ++y;
+            document.writeln(x);
+        }
+        function Trhow() {
+            try {
+                var red = prompt("Enter No");
+                var de = red * 5;
+                alert("The No is " + de);
+
+            }
+            catch (er) {
+                alert(" There is error ;  " + er.description);
+            }
+        }
+        function conf() {
+            try {
+                var x = confirm("1 * 3 = 100 ?");
+                if (x == true)
+                    alert("Logged iN Successfully!!!");
+                else
+                    alert("Just Go out!!!")
+
+            }
+            catch (er) {
+                alert("Just errored  your self" + er.description);
+
+            }
+            var a = new Array("Ge", "sd", "ed");
+
+            //var b - new are("")
+            document.writeln(a[0]);
+        }
+        function attin(var1, var2) {
+            var3 = var1 * var2;
+
+
+            alert("Hallos");
+
+        }
+        function strn() {
+            var txt = "we are so called the \nViking from the north";
+            //  document.write(txt.length + "\n");
+            document.write(txt.replace("north", "SOuth"));
+            document.write(txt.toUpperCase() + "<br/>");
+            document.write(txt.strike() + "<br/>");
+            document.write(txt.italics() + "<br/>");
+            document.write(txt.sub() + "<br/>");
+            document.write(txt.fontcolor("green") + "<br/>");
+
+        }
+        function CLK() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            document.getElementById("txt").innerHTML = h + m + s;
+            t = setTimeout("CLK()", 500);
+
+        }
+        function are() {
+            var a = new Array("Ge", "sd", "ed");
+
+            //var b - new are("")
+            for (x in a)
+                document.writeln(a[x] + "<br><br>");
+            document.writeln(a.shift() + "<br><br>");
+            for (x in a)
+                document.writeln(a[x] + "<br><br>");
+            for (x in a)
+                document.writeln(a[x] + "<br><br>");
+            document.writeln(a.sort() + "<br><br>");
+            for (x in a)
+                document.writeln(a[x] + "<br><br>" + a.join());
+
+            document.writeln(Math.round(0.60) + "<br><br>");
+            document.writeln(Math.random() + "<br><br>");
+
+            var str = "Hello Wordls";
+            var Pat1 = /l/g;
+            document.write(Pat1);
+            var arew = new RegExp("e");
+            document.write(arew.exec("Test The ge"));
+
+        }
+        function navd() {
+            document.write("Browsm codename" + navigator.appCodeName + "<br/>");
+            document.write("Browsm name" + navigator.appName + "<br/>");
+            document.write("Browsm name" + navigator.cookieEnabled + "<br/>");
+            document.write("Browsm name" + navigator.platform + "<br/>");
+        }
+        function setCookie(c_name, value, expiredays) {
+            var exdate = new Date();
+            if (expiredays != null) {
+                exdate.setDate(exdate.getDate() + expiredays);
+                document.cookie = c_name + "=" + encodeURIComponent(value) + ";expires=" + exdate.toUTCString() + ";path=/";
+            } else {
+                document.cookie = c_name + "=" + encodeURIComponent(value) + ";path=/";
+            }
+        }
+        function validRequie(field){
+            with(field)
+            {
+                if(value == null|| value == "")
+            {
+                alert("Input the email");
+                return false;
+              
+            }
+            else
+            {
+                
+
+                return true;
+            }
+            
+            }
+
+        }
+        function validateForm(thisForm)
+        {
+            with(thisForm)
+            {
+                if (validRequie(Email) == false)
+            {
+                Email.focus();
+                return false;
+            }
+            }
+        }
+        function ale()
+        {
+           // var t =setTimeout("alert('5 seconds')", 1000);
+            var today = new Date();
+            var hour = today.getHours() - 7 ;
+            var Tire = 7 - hour;
+            var minute = today.getMinutes();
+            var seconds = today.getSeconds();
+            document.getElementById("txt").innerHTML = 'New York time ' + hour + ' : ' + seconds + ':'+ minute;
+            x = setTimeout("ale()", 1000);
+            if(hour >=7 && hour < 17 )
+            document.getElementById("txt").innerHTML = "Time for work  <br>" +  'New York time ' + hour + ' : ' + seconds + ':'+ minute;
+            else
+            document.getElementById("txt").innerHTML = Tire + " hours remaining \n" + (60 - minute) + " Minutes remaining";
+
+            
+        }
+      
+
+
+
+
+    </script>
+</head>
+
+<body>
+    
+    <input type="button" value=Alert  onclick="ale()" /><br><br>
+    <a  href="Het.html" onmouseout="document.Imego.src = 'Img2.png'" onmouseover="document.Imego.src = 'img.png'" >
+        <img src = "img.png" alt="First Image" name = "Imego" width="145" height="39"/>
+         
+
+    </a>
+   
+    <script>
+  function OBJ(x,y)
+        {
+            
+
+            this.domestic = x;
+            this.wild = y;
+            this.DOMWI= DOMWI;
+            
+        }
+        function DOMWI(lasto)
+        {
+        this.wild=lasto;
+        }
+   //  MyAnimals = new OBJ(document.getElementById(t2),document.getElementById(t3));
+   MyAnimals = new OBJ("Cow", "Lion");
+   MyAnimals.DOMWI("cheetah")
+     document.writeln(MyAnimals.domestic + MyAnimals.wild);
+
+    </script>
+   Text1 <input id = "t2" type = "text" name = txt_1/><br><br>
+   Text2 <input id = "t3" type = "text" name = txt_2/><br><br>
+    <input type="button" value="Object" onclick="OBJ(NM,HN)" />
+    <input type="button" value="New Message" ondblclick="conf()" />
+    <input type="button" value="stringTest" onclick="are()" />
+    <input type="button" value=Clock onclick="CLK()" />
+    <input type="button" value="cookie" onclick="setCookie()" />
+    <input type = textarea rows="2" cols=" 3" required>
+    <input type = "submit" />
+    <form target="_blank" action = "assignment(2).html" onsubmit="return validateForm(this)" method="post">
+        <!--Name <input type= textarea rows=" 2" cols="5"> <br> -->
+        Email <input type = text name="Email"/> <br>
+        <input type="submit" value = "submit">
+    </form>
+    <div id = "txt" ></div>
+
+</body> 
+
+</html>
