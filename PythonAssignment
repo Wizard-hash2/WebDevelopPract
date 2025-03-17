@@ -1,0 +1,18 @@
+def calc():
+    FirstNO = int(input("Enter first number: \n"))
+    SecNO = int(input("Enter second number: \n"))
+    operation = input("Enter operation (+, -, *): \n")
+
+    if operation == "+":
+        Results = FirstNO + SecNO
+    elif operation == "-":
+        Results = FirstNO - SecNO
+    elif operation == "*":
+        Results = FirstNO * SecNO
+    else:
+        print("Invalid operation")
+        return
+
+    print(f"Result: {Results}")
+
+calc()
