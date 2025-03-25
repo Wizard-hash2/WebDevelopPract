@@ -8,4 +8,4 @@ def calculate_discount(price, discount_percent):
         print(Final_Price)
     
 
-calculate_discount(1000,21)#example
+calculate_discount(1000,21)#example using 1000 as price and 21 as th percent
